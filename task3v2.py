@@ -162,6 +162,14 @@ def selection(pop_with_fitness, population_loss, new_born_rate) -> list and int:
         best_genes.append(copy.deepcopy(sorted_pop[i][3]))
     return best_genes, avg_top_fitness
 
+
+def cross_over_point_selection(smallest_gene) -> int and int:
+    """Cross over point selection function"""
+    position1 = random.randint(0, smallest_gene)
+    position2 = random.randint(0, smallest_gene)
+    return min(position1, position2), max(position1, position2)
+
+
 def cross_over(gene1, gene2) -> list:
     """Cross over function the function takes two genes and returns 2 new genes
     args = (gene1 = (["right","left"...], 1), gene2 = (gene, 2))
@@ -169,13 +177,15 @@ def cross_over(gene1, gene2) -> list:
     """
     new_gene1 = [] # new gene
     new_gene2 = [] # new gene
-    for i in range(len(gene1[0])):
-        if i < len(gene1[0]) / 2: # first half of gene1 and second half of gene2 mid point crossover
-            new_gene1.append(gene1[0][i])
-            new_gene2.append(gene2[0][i])
-        else:
+    smallest_gene = min(len(gene1[0]), len(gene2[0]))
+    start_point, end_point = cross_over_point_selection(smallest_gene)
+    for i in range(smallest_gene):
+        if i >= start_point and i <= end_point:
             new_gene1.append(gene2[0][i])
             new_gene2.append(gene1[0][i])
+        else:
+            new_gene1.append(gene1[0][i])
+            new_gene2.append(gene2[0][i])
     return (new_gene1, gene1[1]), (new_gene2, gene2[1])
 
 
