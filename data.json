@@ -1,0 +1,170 @@
+{
+    "10": [
+        {
+            "mutationrate": 0.9,
+            "Logged": [77, 606.7922525268076, [
+                ["Birmingham", "Warsaw", "Munich", "Sofia", "Rome", "Brussels",
+                 "Prague", "Amsterdam", "London", "Kyiv", "Milan", "Istanbul",
+                 "Vienna", "Budapest", "Minsk", "Berlin", "Paris", "Moscow",
+                 "Barcelona", "Bucharest"]
+            ]],
+            "time": "0:01:03.134523"
+        },
+        {
+            "mutationrate": 0.6,
+            "Logged": [3519, 619.5228779775179, [
+                ["Berlin", "Munich", "Sofia", "Vienna", "Paris", "Warsaw",
+                 "Birmingham", "Milan", "Minsk", "Amsterdam", "Kyiv", "Rome",
+                 "Prague", "Barcelona", "Brussels", "Istanbul", "Budapest",
+                 "Moscow", "Bucharest", "London"]
+            ]],
+            "time": "0:00:28.779356"
+        },
+        {
+            "mutationrate": 0.3,
+            "Logged": [4744, 555.900364800709, [
+                ["Brussels", "Budapest", "London", "Sofia", "Bucharest", "Kyiv",
+                 "Milan", "Prague", "Moscow", "Amsterdam", "Minsk", "Birmingham",
+                 "Paris", "Vienna", "Rome", "Istanbul", "Berlin", "Barcelona",
+                 "Warsaw", "Munich"]
+            ]],
+            "time": "0:00:50.826956"
+        },
+        {
+            "mutationrate": 0.1,
+            "Logged": [5618, 655.8562170861757, [
+                ["Paris", "Amsterdam", "Birmingham", "Barcelona", "Istanbul",
+                 "London", "Moscow", "Minsk", "Brussels", "Berlin", "Budapest",
+                 "Milan", "Vienna", "Munich", "Kyiv", "Sofia", "Bucharest",
+                 "Prague", "Warsaw", "Rome"]
+            ]],
+            "time": "0:01:10.803341"
+        }
+    ],
+    "20": [
+        {
+            "mutationrate": 0.9,
+            "Logged": [4949, 498.6095601235596, [
+                ["Munich", "Brussels", "Warsaw", "Kyiv", "Budapest", "Barcelona",
+                 "Rome", "Minsk", "Amsterdam", "Paris", "Vienna", "Bucharest",
+                 "Istanbul", "Berlin", "Sofia", "Milan", "London", "Moscow",
+                 "Prague", "Birmingham"]
+            ]],
+            "time": "0:01:03.851904"
+        },
+        {
+            "mutationrate": 0.6,
+            "Logged": [9956, 586.3848536234236, [
+                ["Paris", "Bucharest", "Berlin", "Vienna", "Birmingham",
+                 "Amsterdam", "Warsaw", "Milan", "Barcelona", "Munich", "Sofia",
+                 "Rome", "Prague", "Kyiv", "London", "Moscow", "Minsk",
+                 "Istanbul", "Brussels", "Budapest"]
+            ]],
+            "time": "0:00:51.068656"
+        },
+        {
+            "mutationrate": 0.3,
+            "Logged": [5160, 564.8790462998454, [
+                ["Barcelona", "Munich", "Amsterdam", "Rome", "Birmingham",
+                 "Minsk", "Vienna", "Moscow", "Prague", "Berlin", "London",
+                 "Paris", "Kyiv", "Bucharest", "Istanbul", "Warsaw", "Sofia",
+                 "Milan", "Brussels", "Budapest"]
+            ]],
+            "time": "0:01:32.514914"
+        },
+        {
+            "mutationrate": 0.1,
+            "Logged": [2009, 564.3398160875469, [
+                ["Paris", "Istanbul", "Brussels", "Minsk", "Birmingham", "Warsaw",
+                 "Sofia", "Barcelona", "Rome", "Kyiv", "Budapest", "Vienna",
+                 "Amsterdam", "Milan", "Munich", "Prague", "Bucharest", "London",
+                 "Moscow", "Berlin"]
+            ]],
+            "time": "0:01:10.249473"
+        }
+    ],
+    "50": [
+        {
+            "mutationrate": 0.9,
+            "Logged": [5195, 572.8611994688376, [
+                ["Barcelona", "Minsk", "London", "Amsterdam", "Kyiv", "Prague",
+                 "Rome", "Brussels", "Birmingham", "Budapest", "Paris", "Warsaw",
+                 "Munich", "Milan", "Berlin", "Istanbul", "Bucharest", "Vienna",
+                 "Moscow", "Sofia"]
+            ]],
+            "time": "0:03:33.711507"
+        },
+        {
+            "mutationrate": 0.6,
+            "Logged": [5505, 533.0643639524739, [
+                ["Paris", "Barcelona", "Berlin", "Budapest", "Warsaw", "Kyiv",
+                 "Minsk", "Sofia", "London", "Vienna", "Bucharest", "Birmingham",
+                 "Moscow", "Prague", "Istanbul", "Munich", "Amsterdam", "Rome",
+                 "Milan", "Brussels"]
+            ]],
+            "time": "0:03:32.518710"
+        },
+        {
+            "mutationrate": 0.3,
+            "Logged": [8395, 593.8059597944373, [
+                ["Prague", "Moscow", "Kyiv", "Berlin", "Sofia", "Minsk", "Warsaw",
+                 "Vienna", "Birmingham", "Milan", "Brussels", "London", "Paris",
+                 "Bucharest", "Budapest", "Munich", "Amsterdam", "Barcelona",
+                 "Istanbul", "Rome"]
+            ]],
+            "time": "0:02:43.255344"
+        },
+        {
+            "mutationrate": 0.1,
+            "Logged": [4768, 583.9486385555045, [
+                ["Munich", "London", "Rome", "Milan", "Berlin", "Moscow",
+                 "Birmingham", "Sofia", "Bucharest", "Brussels", "Vienna",
+                 "Budapest", "Minsk", "Prague", "Paris", "Amsterdam", "Warsaw",
+                 "Istanbul", "Barcelona", "Kyiv"]
+            ]],
+            "time": "0:02:37.300632"
+        }
+    ],
+    "100": [
+        {
+            "mutationrate": 0.9,
+            "Logged": [3569, 615.8248201109699, [
+                ["Minsk", "Prague", "Vienna", "Paris", "Budapest", "Milan",
+                 "Barcelona", "Berlin", "Bucharest", "London", "Istanbul",
+                 "Amsterdam", "Birmingham", "Warsaw", "Moscow", "Munich", "Sofia",
+                 "Rome", "Brussels", "Kyiv"]
+            ]],
+            "time": "0:05:50.726514"
+        },
+        {
+            "mutationrate": 0.6,
+            "Logged": [2457, 448.59947676098955, [
+                ["Birmingham", "Sofia", "Budapest", "Milan", "Prague", "Vienna",
+                 "London", "Barcelona", "Bucharest", "Minsk", "Moscow",
+                 "Istanbul", "Paris", "Brussels", "Rome", "Amsterdam", "Kyiv",
+                 "Munich", "Warsaw", "Berlin"]
+            ]],
+            "time": "0:05:18.775311"
+        },
+        {
+            "mutationrate": 0.3,
+            "Logged": [9737, 512.43079891412, [
+                ["Rome", "London", "Warsaw", "Moscow", "Bucharest", "Istanbul",
+                 "Amsterdam", "Barcelona", "Minsk", "Sofia", "Munich", "Budapest",
+                 "Prague", "Birmingham", "Berlin", "Milan", "Kyiv", "Paris",
+                 "Brussels", "Vienna"]
+            ]],
+            "time": "0:04:04.129871"
+        },
+        {
+            "mutationrate": 0.1,
+            "Logged": [8844, 538.5355051914943, [
+                ["Birmingham", "Moscow", "Sofia", "Amsterdam", "Brussels",
+                 "Istanbul", "Warsaw", "Munich", "Bucharest", "Berlin", "Prague",
+                 "Budapest", "Vienna", "Kyiv", "Minsk", "London", "Barcelona",
+                 "Rome", "Paris", "Milan"]
+            ]],
+            "time": "0:03:17.477575"
+        }
+    ]
+}
