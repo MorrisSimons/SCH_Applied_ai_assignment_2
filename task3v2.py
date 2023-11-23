@@ -162,17 +162,38 @@ def selection(pop_with_fitness, population_loss, new_born_rate) -> list and int:
         best_genes.append(copy.deepcopy(sorted_pop[i][3]))
     return best_genes, avg_top_fitness
 
+def cross_over(gene1, gene2) -> list:
+    """Cross over function the function takes two genes and returns 2 new genes
+    args = (gene1 = (["right","left"...], 1), gene2 = (gene, 2))
+    returns = 2 new genes
+    """
+    new_gene1 = [] # new gene
+    new_gene2 = [] # new gene
+    for i in range(len(gene1[0])):
+        if i < len(gene1[0]) / 2: # first half of gene1 and second half of gene2 mid point crossover
+            new_gene1.append(gene1[0][i])
+            new_gene2.append(gene2[0][i])
+        else:
+            new_gene1.append(gene2[0][i])
+            new_gene2.append(gene1[0][i])
+    return (new_gene1, gene1[1]), (new_gene2, gene2[1])
+
 
 def mutation(population, mutaion_rate) -> list:
     """mutation on genes in population
     args = (population = list of genes, mutaion_rate = number between 0 and 1)
     returns = mutated population [["up","left", "down"...], gene2, gene3, ...]
     """
+    cross_over_lst = []
     for i in range(len(population)):
-        for j in range(len(population[i])):
-            random_value = random.random()
-            if random_value < mutaion_rate:
-                population[i][j] = random.choice(["up", "down", "left", "right"])
+        random_value = random.random()
+        if random_value < mutaion_rate and len(cross_over_lst) != 2:
+            cross_over_lst.append((population[i], i))
+        elif len(cross_over_lst) == 2:
+            new_gene1, new_gene2 = cross_over(cross_over_lst[0], cross_over_lst[1])
+            population[new_gene1[1]] = new_gene1[0]
+            population[new_gene2[1]] = new_gene2[0] 
+            cross_over_lst = []
     return population
 
 
@@ -246,8 +267,8 @@ def rank_gene(genes, start_pos, end_pos) -> list:
 if __name__ == "__main__":
     # Parameters
     draw_int_mazes = 5 # Number of mazes to draw
-    generations = 100 # Number of generations
-    popultaiton_size = 100 # Population size number of genes
+    generations = 50 # Number of generations
+    popultaiton_size = 50 # Population size number of genes
     step_limit = 7750 # Max number of steps in a gene
     pop_loss_rate = 0.10 # Poploss are death of worst genes
     new_born_rate = 0.095 # Newborns are of top genes
@@ -259,7 +280,7 @@ if __name__ == "__main__":
     start = time.time()
     # Init population
     print("Settings:")
-    print(f"Generations: {generations}     | popultaiton_size: {popultaiton_size}\nStep_limit: {step_limit}     | pop_loss_rate: {pop_loss_rate}\nNew_born_rate: {new_born_rate} | mutation_rate: {mutation_rate}\nLearning_rate: {learning_rate}  | thresholdrate: {thresholdrate}")
+    print(f"Generations: {generations}      | popultaiton_size: {popultaiton_size}\nStep_limit: {step_limit}     | pop_loss_rate: {pop_loss_rate}\nNew_born_rate: {new_born_rate} | mutation_rate: {mutation_rate}\nLearning_rate: {learning_rate}  | thresholdrate: {thresholdrate}")
     print("[INFO] Init population")
     population = init_population(popultaiton_size, step_limit)
     chart_fitness_data = []
