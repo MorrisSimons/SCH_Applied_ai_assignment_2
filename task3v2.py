@@ -189,12 +189,13 @@ def cross_over(gene1, gene2) -> list:
     return (new_gene1, gene1[1]), (new_gene2, gene2[1])
 
 
-def mutation(population, mutaion_rate) -> list:
+def mutation(population, mutaion_rate, random_mutation = False) -> list:
     """mutation on genes in population
-    args = (population = list of genes, mutaion_rate = number between 0 and 1)
+    args = (population = list of genes, mutaion_rate = number between 0 and 1, if allow random mutation to create new gene sets)
     returns = mutated population [["up","left", "down"...], gene2, gene3, ...]
     """
     cross_over_lst = []
+    
     for i in range(len(population)):
         random_value = random.random()
         if random_value < mutaion_rate and len(cross_over_lst) != 2:
@@ -204,6 +205,13 @@ def mutation(population, mutaion_rate) -> list:
             population[new_gene1[1]] = new_gene1[0]
             population[new_gene2[1]] = new_gene2[0] 
             cross_over_lst = []
+
+        if random_mutation:
+            for j in range(len(population[i])):
+                random_value = random.random()
+                if random_value < mutaion_rate:
+                    population[i][j] = random.choice(["up", "down", "left", "right"])
+                    
     return population
 
 
@@ -288,9 +296,11 @@ if __name__ == "__main__":
     ending_position = get_ending_position(maze)
     start_position = get_starting_position(maze)
     start = time.time()
+    allow_random_mutations = True
     # Init population
     print("Settings:")
     print(f"Generations: {generations}      | popultaiton_size: {popultaiton_size}\nStep_limit: {step_limit}     | pop_loss_rate: {pop_loss_rate}\nNew_born_rate: {new_born_rate} | mutation_rate: {mutation_rate}\nLearning_rate: {learning_rate}  | thresholdrate: {thresholdrate}")
+    print(f"Random mutations: {allow_random_mutations}")
     print("[INFO] Init population")
     population = init_population(popultaiton_size, step_limit)
     chart_fitness_data = []
@@ -302,7 +312,7 @@ if __name__ == "__main__":
         best_genes, avg_fitness = selection(fitted_pop, pop_loss_rate, new_born_rate)
         chart_fitness_data.append((generation, avg_fitness))
         # Mutation
-        population = mutation(best_genes, mutation_rate)
+        population = mutation(best_genes, mutation_rate, random_mutation=allow_random_mutations)
         if mutation_rate > thresholdrate:
             mutation_rate = mutation_rate * (1- learning_rate)
     # End 
