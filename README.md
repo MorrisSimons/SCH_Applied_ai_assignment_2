@@ -17,8 +17,8 @@ on the given implementation to resolve optimization problem.
 Reading advice: Russell & Norvig: Artificial Intelligence - A Modern Approach, Section 4.3 in the 2nd
 edition.
 
-task 3 is without Crossover
-task3v2 is with Crossover
+- task 3 is without Crossover
+- task3v2 is with Crossover
 
 # Tasks
 ## Tasks 1:
